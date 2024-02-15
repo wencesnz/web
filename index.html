@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bomboncita</title>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css"> 
+
+<!-- Enlace a la fuente de Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Contenedor principal de Bootstrap -->
+<div class="container-fluid p-0">
+    <!-- Contenedor personalizado -->
+    <div class="custom-container">
+    </div>
+
+    <div class="custom-container2">
+        <!-- Contenido del contenedor -->
+        <div class="inner-container">
+            <!-- Contenido adicional, simula una hoja dentro de la carta -->
+           <h4>Una linda bomboncita</h4>
+        </div>
+    </div>
+    <div class="btn-container">
+        <a href="home.html" id="image-link">
+            <img src="./boton3.png" alt="es el sello de la carta">
+        </a>
+    </div>
+    
+</div>
+<!-- Bootstrap JS y dependencias de jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#image-link').click(function(e){
+            e.preventDefault();
+            $('.btn-container img').addClass('rotate-right'); // Agregar clase para rotar hacia la derecha
+    
+            // Animación de la imagen por 1 segundo
+            setTimeout(function() {
+                window.location.href = $('#image-link').attr('href');
+            }, 3000);
+    
+            // Animación del triángulo después de que termine la animación de la imagen
+            setTimeout(function() {
+                $('.custom-container').toggleClass('opened');
+            }, 1000); // Cambia el valor de 1000 a la cantidad de tiempo que desees en milisegundos
+        });
+    });
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+body {
+    background-color: #FEC8D8;
+    font-family: 'Caveat';
+}
+
+.div{
+    border-radius: 300px; /* Bordes redondeados */
+}
+
+.container {
+    margin-top: 50px; /* Espacio en la parte superior */
+    padding: 20px;
+    text-align: center;
+    background-color: #d291bcb4;
+    border-radius: 30px; /* Bordes redondeados */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrar horizontalmente */
+}
+
+
+/* Estilo para el título del poema */
+.container h2 {
+    color: white;
+    font-size: 40px; /* Tamaño del texto del título */
+    text-align: center; /* Centrado horizontal */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.container .btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #6C5B7B; /* Color del botón */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.container .btn-primary:hover {
+    background-color: #564D6D; /* Color del botón al pasar el mouse */
+}
+
+.container .btn-primary::after {
+    content: '\2192'; /* Código Unicode para la flecha derecha */
+    margin-left: 10px;
+}
+
+.container .btn-primary::after {
+    display: inline-block;
+    font-family: Arial, sans-serif; /* Fuente para el icono */
+}
+
+   /* Agrega la animación fadeInDown */
+   @keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Aplica la animación a todos los elementos dentro del contenedor */
+.animated * {
+    animation: fadeInDown 2s ease-in-out;
+}

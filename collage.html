@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style_collage.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <title>Bomboncita</title>
+
+</head>
+<body>
+
+    <div class="container-fluid d-flex justify-content-center align-items-center animated" style="height: 100vh;">
+        <div class="container">
+            <h2>Obvio que es la mas preciosa :3</h2>
+            <div class="collage-container"></div>
+            <a href="video.html" class="btn btn-primary">Siguiente</a>
+
+        </div>
+    </div>
+     
+ 
+
+    <!-- Bootstrap JS y dependencias de jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>// URLs de las imágenes
+    var imageUrls = [
+        "fotos/foto4.jpg",
+        "fotos/foto1.jpg",
+        "fotos/foto3.jpg",
+        "fotos/foto2.jpg",
+        "fotos/foto9.jpg",
+        "fotos/foto6.jpg",
+        "fotos/foto7.jpg",
+        "fotos/foto8.jpg",
+        "fotos/foto5.jpg",
+        "fotos/foto10.jpg",
+        "fotos/foto11.jpg",
+        "fotos/foto12.jpg",
+    ];
+    
+    // Referencia al contenedor de collage
+    var collageContainer = document.querySelector('.collage-container');
+    
+    // Iterar sobre las URLs de las imágenes y crear elementos <img> para cada una
+    imageUrls.forEach(function(url) {
+        var img = document.createElement('img');
+        img.src = url;
+        collageContainer.appendChild(img);
+    });
+    </script>
+    </body>
+    </html>
+</html>

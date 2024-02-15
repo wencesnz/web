@@ -1,0 +1,56 @@
+body {
+    background-color: #FEC8D8;
+}
+
+.div{
+    border-radius: 300px; /* Bordes redondeados */
+}
+
+.container {
+    margin-top: 50px; /* Espacio en la parte superior */
+    padding: 20px;
+    text-align: center;
+    background-color: #d291bcb4;
+    border-radius: 30px; /* Bordes redondeados */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrar horizontalmente */
+}
+
+
+/* Estilo para el título del poema */
+.container h2 {
+    color: white;
+    font-size: 40px; /* Tamaño del texto del título */
+    text-align: center; /* Centrado horizontal */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilo para los versos del poema */
+.container p {
+    color: white; /* Cambio de color del texto */
+    font-size: 24px; /* Tamaño del texto para los versos */
+    line-height: 1.5; /* Altura de línea */
+    text-align: justify; /* Alineación justificada */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.small-image {
+    max-width: 100px; /* Ajusta el valor según el tamaño deseado */
+}
+
+
+   /* Agrega la animación fadeInDown */
+   @keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Aplica la animación a todos los elementos dentro del contenedor */
+.animated * {
+    animation: fadeInDown 2s ease-in-out;
+}
